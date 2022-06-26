@@ -13,6 +13,7 @@ jobs:
       - name: python scripts
         run: |
           import  platform
+          print 
           (platform.processor())
         shell: python
 
