@@ -1,14 +1,19 @@
-name: shell commands
+name: Shell commands
 on: [push]
 jobs:
-  running_shell_command:
+  running_script:
     runs-on: ubuntu-latest
     steps:
-      - name: signle script
+      - name: echo a string
         run: echo "Welcome to github actions"
-      - name: multi script
+      - name: multiple scripts
         run: |
          npm -v
          node -v
-          
+      - name: python scripts
+        run: |
+          import  platform
+          (platform.processor())
+        shell: python
+
 
